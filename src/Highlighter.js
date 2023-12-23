@@ -5,6 +5,7 @@ import { createElement } from 'react'
 import memoizeOne from 'memoize-one'
 
 Highlighter.propTypes = {
+  multipleHighlight: PropTypes.bool,
   activeClassName: PropTypes.string,
   activeIndex: PropTypes.number,
   activeStyle: PropTypes.object,
@@ -43,6 +44,7 @@ Highlighter.propTypes = {
  * This function returns an array of strings and <span>s (wrapping highlighted words).
  */
 export default function Highlighter ({
+  multipleHighlight = true,
   activeClassName = '',
   activeIndex = -1,
   activeStyle,
